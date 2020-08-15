@@ -16,16 +16,18 @@ jobs:
           fetch-depth: 0
 
       - name: setup R
-        uses: r-lib/actions/setup-r@v1
+        uses: r-lib/actions/setup-r@master
         with:
           r-version: '4.0.2'
 
-      - name: intall packages
+      - name: install packages
         run: |
-          Rscript -e 'install.packages(c("httr", "rjson", "jsonlite", "plyr", "tidyverse"))'
+          install.packages(c("remotes", "httr", "rjson", "jsonlite", "plyr", "tidyverse"))
+          remotes::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
 
       - name: download data
-        run: Rscript src/R/cartola_fetch.R
+        shell: Rscript src/R/cartola_fetch.R
 
       - name: commit files
         run: |
