@@ -22,11 +22,11 @@ jobs:
 
       - name: install packages
         run: |
-          install.packages("httr", dependencies=TRUE)
+          install.packages(c("httr", "rjson", "jsonlite", "plyr", "tidyverse"), dependencies=TRUE)
         shell: Rscript {0}
 
-      # - name: download data
-      #   run: Rscript src/R/cartola_fetch.R
+      - name: download data
+        run: Rscript src/R/cartola_fetch.R
 
       # - name: commit files
       #   run: |
