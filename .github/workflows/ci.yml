@@ -2,7 +2,7 @@ name: cartola-data
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/2 * * * *"
 
 jobs:
   update-data:
