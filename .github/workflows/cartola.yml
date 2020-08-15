@@ -1,4 +1,4 @@
-name: cartola-data
+name: cartola
 
 on:
   schedule:
