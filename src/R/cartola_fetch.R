@@ -25,7 +25,8 @@ library(tidyverse)
 
 # Set working directory
 # Setar diretório de trabalho. No Windows é um pouco diferente.
-setwd("~/github_repos/caRtola/")
+# setwd("~/github_repos/caRtola/")
+print(getwd())
 
 ###################
 # Fetch Player Data 
