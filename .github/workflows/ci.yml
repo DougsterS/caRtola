@@ -27,7 +27,7 @@ jobs:
         shell: Rscript {0}
 
       - name: download data
-        shell: Rscript src/R/cartola_fetch.R
+        run: Rscript src/R/cartola_fetch.R
 
       - name: commit files
         run: |
