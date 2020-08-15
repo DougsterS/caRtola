@@ -1,9 +1,8 @@
 name: cartola-data
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: '*/3 * * * *'
 
 jobs:
   update-data:
