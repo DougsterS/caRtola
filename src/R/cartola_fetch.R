@@ -13,6 +13,7 @@
 
 # Remind yourself to install packages before loading them
 # Lembre-se de instalar os pacotes abaixo antes de carregá-los
+install.packages(c("httr", "rjson", "jsonlite", "plyr", "tidyverse"), dependencies=TRUE)
 
 # Load Libraries
 # Carregar pacotes R

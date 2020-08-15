@@ -20,12 +20,6 @@ jobs:
         with:
           r-version: '4.0.2'
 
-      - name: install packages
-        run: |
-          install.packages(c("remotes", "httr", "rjson", "jsonlite", "plyr", "tidyverse"))
-          remotes::install_deps(dependencies = TRUE)
-        shell: Rscript {0}
-
       - name: download data
         run: Rscript src/R/cartola_fetch.R
 
