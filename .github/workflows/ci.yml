@@ -20,6 +20,10 @@ jobs:
         with:
           r-version: '4.0.2'
 
+      - name: intall packages
+        run: |
+          Rscript -e 'install.packages(c("httr", "rjson", "jsonlite", "plyr", "tidyverse"))'
+
       - name: download data
         run: Rscript src/R/cartola_fetch.R
 
